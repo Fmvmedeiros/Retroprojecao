@@ -1,0 +1,54 @@
+#N canvas 633 456 1078 511 12;
+#X obj 170 347 netsend;
+#X msg 67 -84 connect 192.168.1.110 2000;
+#X floatatom 170 372 5 0 0 0 - - -;
+#X floatatom 186 116 5 0 0 0 - - -;
+#X msg 177 143 send rodar \$1;
+#X floatatom 310 112 5 0 0 0 - - -;
+#X msg 301 139 send tamanho \$1;
+#X msg 310 46 0.43;
+#X msg 439 140 send Shuter \$1;
+#X obj 439 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 439 82 1;
+#X msg 89 -50 connect localhost 2000;
+#X msg 580 150 send Blink \$1;
+#X obj 580 1 vsl 15 128 -1 100 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X msg 186 68 0;
+#X obj 693 124 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 693 89 1;
+#X obj 177 173 s Enviar;
+#X obj 170 281 r Enviar;
+#X obj 301 177 s Enviar;
+#X obj 439 187 s Enviar;
+#X obj 580 184 s Enviar;
+#X obj 693 177 s Enviar;
+#X msg 693 147 send Fade \$1;
+#X obj 814 -24 vsl 15 128 0 40 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 800 1;
+#X obj 814 183 s Enviar;
+#X msg 814 149 send FadeSpeed \$1;
+#X floatatom 814 112 5 0 0 0 - - -;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 17 0;
+#X connect 5 0 6 0;
+#X connect 6 0 19 0;
+#X connect 7 0 5 0;
+#X connect 8 0 20 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 11 0 0 0;
+#X connect 12 0 21 0;
+#X connect 13 0 12 0;
+#X connect 14 0 3 0;
+#X connect 15 0 23 0;
+#X connect 16 0 15 0;
+#X connect 18 0 0 0;
+#X connect 23 0 22 0;
+#X connect 24 0 27 0;
+#X connect 26 0 25 0;
+#X connect 27 0 26 0;
