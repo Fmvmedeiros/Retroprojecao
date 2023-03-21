@@ -42,7 +42,7 @@
 #X obj 170 291 b;
 #X obj 170 266 gemhead;
 #X obj 145 395 s Blink;
-#X obj 201 236 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 201 236 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 502 195 5 0 0 0 - - -;
 #X obj 482 229 s BlinkChance;
@@ -51,9 +51,15 @@
 #X obj 308 107 route rodar tamanho Shuter Blink Fade FadeSpeed;
 #X obj 435 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 603 237 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 603 237 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 595 278 s Fade;
+#X obj 493 331 netreceive -u -b 9000;
+#X obj 500 540 print A;
+#X obj 664 566 print;
+#X obj 493 355 osc/unpackOSC;
+#X obj 492 389 route /0/dmx/0 /0/dmx/1;
+#X obj 754 535 print outros;
 #X connect 1 0 0 0;
 #X connect 3 0 2 0;
 #X connect 4 0 2 0;
@@ -85,3 +91,8 @@
 #X connect 33 5 31 0;
 #X connect 34 0 19 0;
 #X connect 35 0 36 0;
+#X connect 37 0 40 0;
+#X connect 40 0 41 0;
+#X connect 41 0 38 0;
+#X connect 41 1 39 0;
+#X connect 41 2 42 0;
